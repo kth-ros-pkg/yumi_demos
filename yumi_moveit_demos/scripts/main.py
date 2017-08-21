@@ -80,12 +80,12 @@ def run():
 
 
     # Drive YuMi end effectors to a desired position (pose_ee), and perform a grasping task with a given effort (grip_effort)
-    
+    # Gripper effort: opening if negative, closing if positive, static if zero
     pose_ee = [0.25, 0.15, 0.2, 0.0, 3.14, 0.0]
     grip_effort = -10.0
     move_and_grasp(yumi.LEFT, pose_ee, grip_effort)
 
-    pose_ee = [0.25, -0.15, 0.2, 0.0, 3.14, 0.0]
+    pose_ee = [0.25, -0.25, 0.2, 0.0, 3.14, 0.0]
     grip_effort = -10.0
     move_and_grasp(yumi.RIGHT, pose_ee, grip_effort)
 
