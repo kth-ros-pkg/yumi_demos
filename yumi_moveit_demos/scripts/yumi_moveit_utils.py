@@ -73,20 +73,24 @@ def init_Moveit():
     # p.pose.position.z = 0.7
     # scene.add_box("part", p, (0.07, 0.01, 0.2))
 
+    
     group_l = moveit_commander.MoveGroupCommander("left_arm")
     group_l.set_planner_id("ESTkConfigDefault")
+    group_l.set_pose_reference_frame("yumi_body")
     group_l.allow_replanning(False)
     group_l.set_goal_position_tolerance(0.00005)
     group_l.set_goal_orientation_tolerance(0.005)
 
     group_r = moveit_commander.MoveGroupCommander("right_arm")
     group_r.set_planner_id("ESTkConfigDefault")
+    group_r.set_pose_reference_frame("yumi_body")
     group_r.allow_replanning(False)
     group_r.set_goal_position_tolerance(0.00005)
     group_r.set_goal_orientation_tolerance(0.0005)
 
     group_both = moveit_commander.MoveGroupCommander("both_arms")
     group_both.set_planner_id("ESTkConfigDefault")
+    group_both.set_pose_reference_frame("yumi_body")
     group_both.allow_replanning(False)
     group_both.set_goal_position_tolerance(0.00005)
     group_both.set_goal_orientation_tolerance(0.0005)
