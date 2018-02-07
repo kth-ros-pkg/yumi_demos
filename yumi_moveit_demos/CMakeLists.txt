@@ -14,6 +14,4 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
 )
 
-include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
-
-
+catkin_python_setup()

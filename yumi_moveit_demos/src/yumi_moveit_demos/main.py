@@ -67,6 +67,8 @@ def run():
     :rtype: None
     """
 
+    rospy.init_node('yumi_moveit_demo')
+
     #Start by connecting to ROS and MoveIt!
     yumi.init_Moveit()
 
